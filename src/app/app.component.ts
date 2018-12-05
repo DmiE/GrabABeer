@@ -20,7 +20,7 @@ export class AppComponent {
     );
     console.log(this.items[1]);
   }
-  onSubmit(empForm: any, event: Event) {
+  onSubmit(event: Event) {
     event.preventDefault();
   }
 }
