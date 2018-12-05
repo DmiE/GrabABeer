@@ -20,4 +20,7 @@ export class AppComponent {
     );
     console.log(this.items[1]);
   }
+  onSubmit(event: Event) {
+    event.preventDefault();
+  }
 }
