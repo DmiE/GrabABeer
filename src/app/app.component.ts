@@ -20,4 +20,8 @@ export class AppComponent {
     );
     console.log(this.items[1]);
   }
+  onSubmit(empForm: any, event: Event) {
+    event.preventDefault();
+    console.log(event.target.beerQuery.value);
+  }
 }

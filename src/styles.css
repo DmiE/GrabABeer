@@ -7,8 +7,8 @@ header,
 }
 
 #intro {
-  /* background: url("https://cdn.pixabay.com/photo/2013/11/12/01/29/bar-209148_1280.jpg")no-repeat center center fixed; */
   background: url("https://cdn.pixabay.com/photo/2017/04/07/01/01/bar-2209813_1280.jpg")no-repeat center center fixed;
+  /* background: url("https://cdn.pixabay.com/photo/2013/11/12/01/29/bar-209148_1280.jpg")no-repeat center center fixed; */
   /* background: url("https://cdn.stocksnap.io/img-thumbs/960w/9EFACE8DD3.jpg")no-repeat center center fixed; */
   /* background: url("https://images.unsplash.com/photo-1527443631444-cfeaa17b56fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb")no-repeat center center fixed; */
   /* background: url("https://cdn.pixabay.com/photo/2018/06/01/09/23/beer-3445988_1280.jpg")no-repeat center center fixed; */
@@ -26,12 +26,12 @@ header,
 
 @media (max-width: 768px) {
   .navbar:not(.top-nav-collapse) {
-    background-color: #24355C;
+    background-color: #8e400c;
   }
 }
 
 @media (min-width: 800px) and (max-width: 850px) {
   .navbar:not(.top-nav-collapse) {
-    background-color: #24355C;
+    background-color: #8e400c;
   }
 }
