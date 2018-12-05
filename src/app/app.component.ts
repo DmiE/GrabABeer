@@ -9,15 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'grab-a-beer';
-  items: Observable<any[]>;
+  beers: Observable<any[]>;
+  filteredBeers: any;
   itemNames: Observable<string[]>;
+
+  filters = {};
+  
   constructor(db: AngularFirestore) {
-    this.items = db.collection('items').valueChanges();
-    this.items.forEach(
-      item => item.forEach(i =>
-        console.log(i.siema)
-      )
-    );
-    console.log(this.items[1]);
+    this.beers = db.collection('beers').valueChanges();
+ 
   }
 }
