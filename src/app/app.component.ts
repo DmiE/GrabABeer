@@ -22,6 +22,5 @@ export class AppComponent {
   }
   onSubmit(empForm: any, event: Event) {
     event.preventDefault();
-    console.log(event.target.beerQuery.value);
   }
 }
