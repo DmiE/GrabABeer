@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { AngularFirestore, CollectionReference, Query } from '@angular/fire/firestore';
+import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +11,31 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'grab-a-beer';
   beers: Observable<any[]>;
-  filteredBeers: any;
-  itemNames: Observable<string[]>;
+  filteredBeers: any[];
+  db: AngularFirestore;
 
-  filters = {};
+  name: string|null;
+  tag: string|null;
+  type: string|null;
+
   
   constructor(db: AngularFirestore) {
-    this.beers = db.collection('beers').valueChanges();
- 
+    this.db = db;
+    this.applyFilters();
+  }
+
+  filterExact(name: string, value: string) {
+    this[name] = value;
+    this.applyFilters();
+  };
+
+  applyFilters() {
+    this.beers = this.db.collection('beers', ref => {
+      let query : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+      if (this.type) { query = query.where('type', '==', this.type) };
+      if (this.tag) { query = query.where('tag', '==', this.tag) };
+      return query;
+    }).valueChanges()
+
   }
 }

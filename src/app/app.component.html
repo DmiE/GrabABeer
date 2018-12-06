@@ -4,9 +4,9 @@
     Welcome to {{ title }}!
   </h1>
   <div class="form-group">
-    <input class="form-control" type="text" [(ngModel)]="searchName" placeholder="Name" />
-    <input class="form-control" type="text" [(ngModel)]="searchTag" placeholder="Tag" />
-    <input class="form-control" type="text" [(ngModel)]="searchType" placeholder="Type" />
+    <input class="form-control" type="text" (change)="filterExact('name', searchName)" [(ngModel)]="searchName" placeholder="Name" />
+    <input class="form-control" type="text" (change)="filterExact('tag', searchTag)" [(ngModel)]="searchTag" placeholder="Tag" />
+    <input class="form-control" type="text" (change)="filterExact('type', searchType)" [(ngModel)]="searchType" placeholder="Type" />
   </div>
   <table class="table table-dark">
     <thead>
@@ -17,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let beer of beers | async | beer_filter : searchName : searchTag : searchType">
+      <tr *ngFor="let beer of beers | async">
         <td>
           {{beer.name}}
         </td>
