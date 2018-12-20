@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AdvSearchComponent } from './adv-search/adv-search.component';
+import { ResultSectionComponent } from './result-section/result-section.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdvSearchComponent,
+    ResultSectionComponent
   ],
   imports: [
     BrowserModule,

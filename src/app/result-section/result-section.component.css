@@ -1,0 +1,26 @@
+#result-section {
+    background: url("../../assets/background3.jpg");
+    background-repeat: no-repeat;
+}
+
+.result-box{
+    color: #dfdfdf;
+    border-radius: 0;
+    background-color: #efefef;
+    height: 100%;
+    width: 100%;
+    border-color: #ffffff;
+    border-width: 2px;
+    border: solid;
+}
+
+.result-map{
+    color: #dfdfdf;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #efefef;
+    border-color: #ffffff;
+    border-width: 2px;
+    border: solid;
+}
