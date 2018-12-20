@@ -3,17 +3,24 @@
     background-repeat: no-repeat;
 }
 
-.adv-search-form{
-    color: #747474;
+.result-box{
+    color: #dfdfdf;
     border-radius: 0;
-    background-color: #282828;
-    height: 60px;
-    border-color: #1b1c20;
+    background-color: #efefef;
+    height: 100%;
+    width: 100%;
+    border-color: #ffffff;
     border-width: 2px;
+    border: solid;
 }
 
-.adv-search-button{
-    height: 70px;
-    background-color: #f6d367;
-    font-size: 20px;
+.result-map{
+    color: #dfdfdf;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #efefef;
+    border-color: #ffffff;
+    border-width: 2px;
+    border: solid;
 }
