@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { AngularFirestore, CollectionReference, Query } from '@angular/fire/firestore';
+import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-result-section',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultSectionComponent implements OnInit {
 
-  constructor() { }
+  @Input() beers: Observable<any[]>;
 
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+
+    this.beers.subscribe(a => {
+      console.log("osz kurwa " + a)
+    })
+  }
 }

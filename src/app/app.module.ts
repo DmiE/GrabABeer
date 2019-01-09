@@ -8,16 +8,19 @@ import { environment } from '../environments/environment';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AdvSearchComponent } from './adv-search/adv-search.component';
 import { ResultSectionComponent } from './result-section/result-section.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AdvSearchComponent,
-    ResultSectionComponent
+    ResultSectionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     MDBBootstrapModule.forRoot()
@@ -26,3 +29,4 @@ import { ResultSectionComponent } from './result-section/result-section.componen
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
