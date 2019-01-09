@@ -33,6 +33,7 @@ export class AppComponent  {
   filterExact(name: string, searchName: string) {
     this[name] = searchName;
     this.applyFilters(searchName);
+    document.querySelector('#result-section').scrollIntoView();
   }
 
   applyFilters(searchedName: string) {
