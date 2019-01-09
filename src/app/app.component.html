@@ -45,7 +45,7 @@
             <h4 class="white-text my-4">With this app you will never have problem to find your favourite beer.</h4>
             <form class="form-inline" (submit)="onSubmit($event)">
               <input class="form-control form-control-sm ml-3 w-100" type="text" placeholder="Type beer you're looking for.." 
-              (change)="filterExact('name', nameSearch.value)" [(ngModel)]="searchName" aria-label="Search" name="nameSearch" #nameSearch>
+              (change)="filterExact('name', nameSearch.value)"  aria-label="Search" name="nameSearch" #nameSearch>
 
               <div class="row d-flex justify-content-center ">
 
