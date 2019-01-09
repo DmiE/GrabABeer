@@ -3,33 +3,33 @@
     <div class="row h-75 w-100">
       <div class="col-sm-3 h-100" >
         <div class="result-box">
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Nazwa</th>
+                    <th scope="col">Tagi</th>
+                    <th scope="col">Typ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let beer of beers | async">
+                    <td>
+                      {{beer.name}}
+                    </td>
+                    <td class="col">
+                      {{beer.tags}}
+                    </td>
+                    <td class="col">
+                      {{beer.type}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
       </div>
       <div class="col-sm-9 h-100" >
         <div class="result-map">
           <div id="map-container" style="height: 100%; width: 100%;">
-
-
-<!--             <div id="map"></div>
-            <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN7SbuB2TZu18yzVhwLR0gDm2k8CAljjE&callback=initMap">
-          </script>
-          <script type="text/javascript">
-           function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: 0, lng: 0},
-              zoom: 3,
-              styles: [{
-                featureType: 'poi',
-      stylers: [{ visibility: 'off' }]  // Turn off points of interest.
-    }, {
-      featureType: 'transit.station',
-      stylers: [{ visibility: 'off' }]  // Turn off bus stations, train stations, etc.
-    }],
-    disableDoubleClickZoom: true
-  });
-          }
-        </script> -->
       </div>
 
     </div>
