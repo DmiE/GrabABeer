@@ -45,7 +45,12 @@ export class AppComponent  {
     }).valueChanges()
     .pipe(map(item => {
       console.log(searchedName)
-      return item.filter(it => it['name'].toLowerCase().includes(searchedName.toLocaleLowerCase()));
+      return item
+      .filter(it => it['name'].toLowerCase().includes(searchedName.toLocaleLowerCase()))
+      .map(it => {
+        it['tags'] = it['tags'].join(', ');
+        return it;
+      });
     }));
   }
 }

@@ -1,9 +1,9 @@
 <div id="result-section" class="h-100">
   <div class="container-fluid d-flex align-items-center justify-content-center h-100">
     <div class="row h-75 w-100">
-      <div class="col-sm-3 h-100" >
-        <div class="result-box">
-            <table class="table table-dark">
+      <div class="col-sm-5 h-100" >
+        <div class="result-box table-responsive">
+            <table mdTable mdTableScroll class="table table-dark table-hover table-fixed">
                 <thead>
                   <tr>
                     <th scope="col">Nazwa</th>
@@ -13,7 +13,7 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let beer of beers | async">
-                    <td>
+                    <td class="col">
                       {{beer.name}}
                     </td>
                     <td class="col">
@@ -27,7 +27,7 @@
               </table>
         </div>
       </div>
-      <div class="col-sm-9 h-100" >
+      <div class="col-sm-7 h-100" >
         <div class="result-map">
           <div id="map-container" style="height: 100%; width: 100%;">
       </div>
