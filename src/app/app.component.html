@@ -36,16 +36,17 @@
       <div class="container-fluid d-flex align-items-center justify-content-center h-100">
         <div class="row d-flex justify-content-center text-center">
           <div class="col-md-10">
+            <img src="../assets/GrabABeerLogo.png" style="width:700px;">
             <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">
-              <i class="fa fa-beer ml-2 fa-0.5x"></i> Grab a beer<i class="fa fa-beer ml-2 fa-0.5x"></i>
-            </h2>
+              <!--<i class="fa fa-beer ml-2 fa-0.5x"></i> Grab a beer<i class="fa fa-beer ml-2 fa-0.5x"></i>-->
+            </h2> 
             <!-- Divider -->
             <hr class="hr-light">
             <!-- Description -->
             <h4 class="white-text my-4">With this app you will never have problem to find your favourite beer.</h4>
             <form class="form-inline" (submit)="onSubmit($event)">
               <input class="form-control form-control-sm ml-3 w-100" type="text" placeholder="Type beer you're looking for.." 
-              (change)="filterExact('name', nameSearch.value)"  aria-label="Search" name="nameSearch" #nameSearch>
+              (change)="filterExact('name', nameSearch.value)" name="nameSearch" #nameSearch>
 
               <div class="row d-flex justify-content-center ">
 
@@ -56,7 +57,7 @@
             </div> -->
             <div class="row d-flex justify-content-center mb-4 mt-4">
               <!-- <button type="button" class="btn btn-outline-white">Search<i class="fa fa-search ml-4"></i></button> -->
-              <a href="#adv-search" class="btn btn-outline-white">Advanced Searching</a>
+              <a href="#adv-search" class="btn btn-outline-white">Search</a>
             </div>
           </div>
         </div>
