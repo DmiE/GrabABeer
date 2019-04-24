@@ -2,6 +2,7 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { AngularFirestore, CollectionReference, Query } from '@angular/fire/firestore';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'app-result-section',
@@ -10,7 +11,8 @@ import { switchMap } from 'rxjs/operators';
 })
 export class ResultSectionComponent implements OnInit {
 
-  @Input() beers: Observable<any[]>;
+  //@Input() beers: Observable<any[]>;
+  @Input() beers: AppComponent['beers'];
 
   constructor() {
   }
@@ -18,7 +20,7 @@ export class ResultSectionComponent implements OnInit {
   ngOnInit() {
 
     this.beers.subscribe(a => {
-      console.log("osz kurwa " + a)
+      console.log("beers" + a)
     })
   }
 }

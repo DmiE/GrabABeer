@@ -44,14 +44,14 @@
   <script>
     // Regular map
     function regular_map() {
-      var var_location = new google.maps.LatLng(50, 20);
+      let var_location = new google.maps.LatLng(50, 20);
 
-      var var_mapoptions = {
+      let var_mapoptions = {
         center: var_location,
         zoom: 14
       };
 
-      var var_map = new google.maps.Map(document.getElementById("map-container"),
+      let var_map = new google.maps.Map(document.getElementById("map-container"),
         var_mapoptions);
 
       // var var_marker = new google.maps.Marker({
