@@ -24,3 +24,7 @@
     border-width: 2px;
     border: solid;
 }
+
+agm-map {
+    height: 100%;
+}

@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent  {
   title = 'grab-a-beer';
   beers: Observable<any[]>;
-  filteredBeers: any[];
+  filteredBeers: any[];  //  pusty array który bedziemy wypełniać
   db: AngularFirestore;
 
   name: string|null;

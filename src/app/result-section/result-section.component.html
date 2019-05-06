@@ -29,8 +29,9 @@
       </div>
       <div class="col-sm-7 h-100" >
         <div class="result-map">
-          <div id="map-container" style="height: 100%; width: 100%;">
-      </div>
+          <div style="height: 100%; width: 100%;"><agm-map [zoom]='16' [latitude]="50.062006" [longitude]="19.938118">
+            <agm-marker *ngFor="let beer of beers | async" [title]="beer.name" [latitude]="beer.lat" [longitude]="beer.lng" [markerClickable]="clickableMarker" [openInfoWindow]="true"></agm-marker>
+          </agm-map></div>
 
     </div>
   </div>
@@ -38,30 +39,3 @@
 </div>
 </div>
 
- <!--Google aps-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN7SbuB2TZu18yzVhwLR0gDm2k8CAljjE"></script>
-  <!-- Google Maps settings -->
-  <script>
-    // Regular map
-    function regular_map() {
-      let var_location = new google.maps.LatLng(50, 20);
-
-      let var_mapoptions = {
-        center: var_location,
-        zoom: 14
-      };
-
-      let var_map = new google.maps.Map(document.getElementById("map-container"),
-        var_mapoptions);
-
-      // var var_marker = new google.maps.Marker({
-      //   position: var_location,
-      //   map: var_map,
-      //   title: "New York"
-      // });
-    }
-
-    // Initialize maps
-    google.maps.event.addDomListener(window, 'load', regular_map);
-
-  </script>

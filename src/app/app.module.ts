@@ -9,7 +9,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AdvSearchComponent } from './adv-search/adv-search.component';
 import { ResultSectionComponent } from './result-section/result-section.component';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBN7SbuB2TZu18yzVhwLR0gDm2k8CAljjE'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
