@@ -6,7 +6,7 @@
       <form>
         <div class="form-group row" style="margin-bottom: 40px;">
           <div class="col-sm-12">
-            <input type="text" class="form-control form-control-lg adv-search-form" id="BeerName" placeholder="Type beer you're looking for...">
+            <input type="text" class="form-control form-control-lg adv-search-form" id="BeerName" placeholder="Type beer you're looking for..." (change)="filterExact('name', nameSearch.value)" name="nameSearch" #nameSearch>
           </div>
         </div>
         <div class="form-group row" style="margin-bottom: 70px;">
@@ -21,7 +21,7 @@
           </div>
           <div class="col-sm-6">
             <select class="form-control form-control-lg adv-search-form">
-              <option selected>SRM</option>
+              <option selected>IBU</option>
               <option value="1">1% - 20%</option>
               <option value="2">21% - 40%</option>
               <option value="3">41% - 60%</option>

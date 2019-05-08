@@ -1,0 +1,19 @@
+#adv-search {
+    background: url("../assets/background2.jpg");
+    background-repeat: no-repeat;
+}
+
+.adv-search-form{
+    color: #747474;
+    border-radius: 0;
+    background-color: #282828;
+    height: 60px;
+    border-color: #1b1c20;
+    border-width: 2px;
+}
+
+.adv-search-button{
+    height: 70px;
+    background-color: #f6d367;
+    font-size: 20px;
+}

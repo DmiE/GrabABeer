@@ -16,6 +16,8 @@ export class ResultSectionComponent implements OnInit {
   lat: any = '';
   lng: any = '';
 
+  clickableMarker: boolean = true;
+
   location: Object;
 
   //@Input() beers: Observable<any[]>;
