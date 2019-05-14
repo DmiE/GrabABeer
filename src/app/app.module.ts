@@ -27,7 +27,7 @@ import { AgmCoreModule } from '@agm/core';
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBN7SbuB2TZu18yzVhwLR0gDm2k8CAljjE'
+      apiKey: 'ApiKey'
     })
   ],
   providers: [],
